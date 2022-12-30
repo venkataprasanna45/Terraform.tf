@@ -1,8 +1,17 @@
-# Creating VPC
-resource "aws_vpc" "demovpc" {
- cidr_block = "${var.vpc_cidr}"
- instance_tenancy = "default"
-tags = {
- Name = "Demo VPC"
+#Update Provider
+#Aws As Our Provider
+
+provider "aws" {
+  region     = "us-east-2"
+  access_key = "AKIAXM35LSXSHFJTAPOM"
+  secret_key = "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"
 }
-} 
+
+# Creating VPC
+resource "aws_vpc" "vpc2" {
+  cidr_block       = "10.0.0.0/16"
+  instance_tenancy = "default"
+  tags = {
+    Name = "vpc2"
+  }
+}
