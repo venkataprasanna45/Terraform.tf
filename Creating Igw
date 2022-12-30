@@ -1,0 +1,7 @@
+# Creating Internet Gateway
+resource "aws_internet_gateway" "igw1" {
+  vpc_id = "vpc-004110ff514c18267"
+  tags = {
+    Name = "Igw2"
+  }
+} 
