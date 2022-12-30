@@ -25,4 +25,4 @@ resource "aws_instance" "demoinstance1" {
   tags = {
     Name = "My Public Instance 2"
   }
-}
+} 
